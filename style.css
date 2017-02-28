@@ -1,0 +1,42 @@
+body {
+  background: url('http://freshwallpapers.info/uploads/posts/2016-02/17_fight_club.jpg');
+  height:100%;
+}
+.container{
+  background:rgba(222,222,222,.5);
+  padding-bottom:40px;
+}
+h3{
+  padding-top:20px;
+}
+button{
+  position:relative;
+  top:30px;
+  margin: 5px;
+}
+.faceoff{
+  min-height:300px;
+}
+.row .col.movie{
+  border: 1px solid black;
+  min-height:300px;
+  padding:3px;
+}
+
+.row .col.book{
+  border: 1px solid black;
+  min-height:300px;
+  padding:3px;
+}
+
+.collection{
+  display:none;
+}
+
+.movie{
+
+}
+
+.book {
+
+}
