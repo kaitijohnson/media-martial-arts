@@ -1,10 +1,14 @@
 $(document).ready(function(){
   //get dat button
-  $('.searchBtn').click(function(){
-    $('#search').empty().remove('.collection-item');
+  $('.clearBtn').click(function(){
+    console.log("I am clicked")
+    $('#search').val('')
+    $('.collection-item').remove()
+    $('.selection').empty()
   });
   $('.searchBtn').click(function(){
     var userSearch = $('#search').val();
+    console.log("search button clicked")
     $.ajax({
       //method for the HTTP request e.g. GET, POST, ..
       method: 'GET',
