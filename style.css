@@ -1,6 +1,8 @@
 body {
   background: url('https://static.pexels.com/photos/26302/pexels-photo.jpg');
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: 	#696969;
 }
 .container{
   background:rgba(222,222,222,.5);
@@ -12,9 +14,17 @@ h3{
 }
 button{
   position:relative;
-  top:30px;
+  /*top:30px;*/
   margin: 5px;
 }
+.searchBtn {
+  top:20px;
+}
+
+.clearBtn {
+  top:20px;
+}
+
 .faceoff{
   min-height:300px;
 }
