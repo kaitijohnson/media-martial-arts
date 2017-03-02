@@ -1,28 +1,63 @@
+html, body {
+    height:100%;
+}
+
 body {
   background: url('https://static.pexels.com/photos/26302/pexels-photo.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: 	#696969;
+  margin-top: 0;
 }
 .container{
   background:rgba(222,222,222,.5);
   position: relative;
-  padding-bottom:100px;
+  /*padding-bottom:100px;*/
+  padding-top: 0;
+  margin-top: 0;
+  height: 100%
 }
+h1{
+  font-family: KnifeFightBallet-Regular;
+  padding-top:20px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 h3{
+  /*font-family: KnifeFightBallet-Regular;*/
   padding-top:20px;
 }
+
+h2{
+  font-family: sternbach;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
 button{
   position:relative;
   /*top:30px;*/
   margin: 5px;
 }
+
+.btn{
+  background-color: red;
+}
+
 .searchBtn {
   top:20px;
 }
 
 .clearBtn {
   top:20px;
+}
+
+.waves-effect.waves-brown .waves-ripple {
+ /* The alpha value allows the text and background color
+ of the button to still show through. */
+  background-color: rgba(121, 85, 72, 0.65);
 }
 
 .faceoff{
@@ -44,10 +79,38 @@ button{
   display:none;
 }
 
+.selection{
+  text-align: center;
+  background-color:rgba(255,255,0,0.3);
+}
+
 .movie{
 
 }
 
 .book {
 
+}
+/* label color */
+ .input-field label {
+   color: #000;
+ }
+ 
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #8b1014;
+  box-shadow: 0 1px 0 0 #8b1014;
+}
+
+html {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+
+@font-face {
+    font-family: "KnifeFightBallet-Regular";
+    src: url('/fonts/knife_fight_ballet/KnifeFightBallet-Regular.otf');
+}
+
+@font-face {
+    font-family: "sternbach";
+    src: url('/fonts/sternbach/Sternbach.otf');
 }

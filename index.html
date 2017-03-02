@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kaiti's Q1 Project</title>
+  <title>Book vs. Movie</title>
   <!-- jQuery, Materialize, script.js, XML to JSON scripts -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
@@ -18,18 +18,26 @@
 
 <body>
   <div class="container">
+    <div id="modal1" class="modal">
+      <div class="modal-content" id="results">
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action btn modal-close waves-effect waves-light red darken-4 clearModalBtn">Again!</a>
+      </div>
+    </div>
     <!-- Heading and Search Box -->
     <div class="col s12">
-      <h3 class="center">Book vs. Movie</h3>
+      <h1 class="center materialize-red-text text-darken-4" font-family="KnifeFightBallet-Regular">Media Martial Arts</h1>
+      <h2 class="center">Ultimate Fight Club</h2>
       <div class="row">
         <div class="col s1"></div>
-        <div class="input-field col s8">
-            <input type="text" placeholder="Search a title..." id="search" name="search" value="fight club"/>
+        <div class="black-text input-field col s8">
+            <input type="text" placeholder="Search a title..." id="search" name="search"/>
           </div>
-          <button class="btn waves-effect waves-light col s1 searchBtn" type="submit" name="action">
+          <button class="btn waves-effect waves-light red darken-4 col s1 searchBtn" type="submit" name="action">
             <i class="material-icons center">search</i>
           </button>
-          <button class="btn waves-effect waves-light col s1 clearBtn" type="submit">
+          <button class="btn waves-effect waves-light red darken-4 col s1 clearBtn" type="submit">
             <i class="material-icons">restore_page</i>
           </button>
           <div class="col s1"></div>
@@ -49,18 +57,19 @@
     <!-- Dynamically generated book and movie columns -->
     <div class="row faceoff">
       <div class="col s12">
-        <p class="center"><button class="btn waves-effect waves-light fightBtn" type="submit">Fight!</button></p>
+        <p class="center"><a href="#modal" class="btn waves-effect waves-light red darken-4 fightBtn" onclick="$('#modal1').modal('open')" type="submit">Fight!</a></p>
       </div>
+
       <div class="col s1"></div>
       <div class="col s5 book">
-        <div class="selection book">
+        <div class="selection book card">
         </div>
         <ul class="collection book">
         </ul>
       </div>
       <!-- <div class="col s2"></div> -->
       <div class="col s5 movie">
-        <div class="selection movie">
+        <div class="selection movie card">
         </div>
         <ul class="collection movie">
         </ul>
