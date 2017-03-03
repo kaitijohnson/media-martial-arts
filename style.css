@@ -6,34 +6,55 @@ body {
   background: url('https://static.pexels.com/photos/26302/pexels-photo.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: 	#696969;
   margin-top: 0;
 }
 .container{
   background:rgba(222,222,222,.5);
   position: relative;
+  overflow-y: scroll;
+  height: 100%;
   /*padding-bottom:100px;*/
   padding-top: 0;
   margin-top: 0;
   height: 100%
 }
 h1{
+  font-size: 95px;
   font-family: KnifeFightBallet-Regular;
+  text-shadow: 2px 2px rgb(0,0,0);
   padding-top:20px;
   padding-bottom: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
+h2{
+  font-size: 75px;
+  font-family: sternbach;
+  text-shadow: 2px 2px rgba(255,255,0,0.4);
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
 h3{
+  font-size: 75px;
+  font-family: KnifeFightBallet-Regular;
   /*font-family: KnifeFightBallet-Regular;*/
-  padding-top:20px;
+  /*padding-top:20px;*/
 }
 
 h2{
   font-family: sternbach;
+  text-shadow: 2px 2px rgba(255,255,0,0.4);
   padding-top: 0px;
   margin-top: 0px;
+}
+
+p{
+  font-size: 23px;
+  color: white;
 }
 
 button{
@@ -43,7 +64,7 @@ button{
 }
 
 .btn{
-  background-color: red;
+  background-color: #8b1014;
 }
 
 .searchBtn {
@@ -54,24 +75,18 @@ button{
   top:20px;
 }
 
-.waves-effect.waves-brown .waves-ripple {
- /* The alpha value allows the text and background color
- of the button to still show through. */
-  background-color: rgba(121, 85, 72, 0.65);
-}
-
 .faceoff{
   min-height:300px;
 }
 .row .col.movie{
   /*border: 1px solid black;*/
-  min-height:300px;
+  min-height:100px;
   padding:3px;
 }
 
 .row .col.book{
   /*border: 1px solid black;*/
-  min-height:300px;
+  min-height:100px;
   padding:3px;
 }
 
@@ -82,6 +97,7 @@ button{
 .selection{
   text-align: center;
   background-color:rgba(255,255,0,0.3);
+  padding: 30px;
 }
 
 .movie{
@@ -91,14 +107,36 @@ button{
 .book {
 
 }
-/* label color */
- .input-field label {
-   color: #000;
+
+.searchBox {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.resultsbox {
+    background-color: rgba(0,0,0,0.4);
+    padding: 50px;
+    width: 100%;
+}
+
+ input[type=text]{
+   font-size: 18px;
+   color: white;
  }
- 
 .input-field input[type=text]:focus {
   border-bottom: 1px solid #8b1014;
   box-shadow: 0 1px 0 0 #8b1014;
+}
+
+.modal {
+    background-color: rgb(160,160,160);
+}
+
+/*.modal-content {
+    background-color: rgba(0,0,0,0.6);
+}*/
+
+.modal-footer {
+    background-color: rgb(160,160,160);
 }
 
 html {

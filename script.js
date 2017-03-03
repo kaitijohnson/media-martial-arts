@@ -2,14 +2,14 @@ $(document).ready(function(){
 $('#modal1').modal();
   //get dat button
   $('.clearBtn').click(function(){
-    console.log("I am clicked")
+    // console.log("I am clicked")
     $('#search').val('')
     $('.collection-item').remove()
     $('.selection').empty()
     $('.collection').removeAttr('style')
   });
   $('.clearModalBtn').click(function(){
-    console.log("I am clicked")
+    // console.log("I am clicked")
     $('#search').val('')
     $('.collection-item').remove()
     $('.selection').empty()
@@ -18,6 +18,8 @@ $('#modal1').modal();
     $('.collection').removeAttr('style')
   });
   $('.fightBtn').click(function(){
+    var audio = $('#bellSound')[0];
+      audio.play();
     var bookCompare = $('.selection.book').attr('data')
     console.log('.fightBtn -> click / bookCompare = ', bookCompare);
     var movieCompare = $('.selection.movie').attr('data')
@@ -26,19 +28,19 @@ $('#modal1').modal();
     console.log(selection)
 
     if(selection.includes('(Nicholas Sparks)')){
-      $('#results').append(`<h4 id="winner">You lose!</h4><br><p id="scores">You have selected a work by Nicholas Sparks. Please improve your taste and try again.</p>`)
+      $('#results').append(`<h2 id="winner">You lose!</h2><br><p id="scores">You have selected a work by Nicholas Sparks. Please improve your taste and try again.</p>`)
     }
     else if (bookCompare > movieCompare) {
       console.log("book wins!")
-      $('#results').append(`<h4 id="winner">The book is better!</h4><br><p id="scores"> The book has an average user rating of ${bookCompare} out of 5. The movie is rated at ${movieCompare}.</p>`)
+      $('#results').append(`<h2 id="winner" class="center">The book is better!</h2><br><p class="center searchBox" id="scores"> The book has an average user rating of ${bookCompare} out of 5. The movie is rated at ${movieCompare}.</p>`)
     }
     else if (movieCompare > bookCompare) {
       console.log("movie wins!")
-      $('#results').append(`<h4 id="winner">The movie is better!</h4><br><p id="scores"> The movie has an average user rating of ${movieCompare} out of 5. The book is rated at ${bookCompare}.</p>`)
+    $('#results').append(`<h2 id="winner" class="center">The movie is better!</h2><div><p class="center resultsbox" id="scores"> The movie has an average user rating of ${movieCompare} out of 5.<br>The book is rated at ${bookCompare}.</p></div>`)
     }
     else if (bookCompare == movieCompare) {
       console.log("It's a draw!")
-      $('#results').append(`<h4 id="winner">It's a draw!</h4><br><p id="scores"> Both the movie and the book are rated at ${bookCompare} out of 5.</p>`)
+      $('#results').append(`<h2 id="winner">It's a draw!</h2><br><p id="scores"> Both the movie and the book are rated at ${bookCompare} out of 5.</p>`)
     }
   })
   $('#search').keydown(function(event){
@@ -59,7 +61,7 @@ $('#modal1').modal();
       dataType: 'json',
       //stuff that happens if I get the data I want back
       success: function(data){
-        console.log(data)
+        // console.log(data)
         //select the "collections" element
         let movieSearch = $('.collection.movie');
         // collection[0].innerHTML = '';
@@ -72,8 +74,8 @@ $('#modal1').modal();
         //   let movie = ds[i];
           let title = data.Title
           let year = data.Year
-          let movieRating = data.imdbRating/2
-          console.log(movieRating)
+          let movieRating = (data.imdbRating/2).toFixed(1)
+          // console.log(movieRating)
           $(movieSearch).append(`<li class="collection-item movie" data="${movieRating}">${title} (${year})</li>`)
         // }
         //add event listener to the collection element
@@ -83,6 +85,7 @@ $('#modal1').modal();
           var movie = event.target;
           //select for the movie box
           var movieDivs = $('.selection.movie').attr('data', movieRating);
+          // var cardHeader = $('.selection.movie.card').append('<span>test</>')
 
           for(var i = 0; i < movieDivs.length; i++){
             if(movieDivs[i].innerText === ''){
@@ -119,22 +122,24 @@ $('#modal1').modal();
         for (var book of work) {
           // console.log(book)
           // let book = work[i];
-          var ratingStr = book['average_rating'];
-          // console.log(rating)
-          var bookRating = parseFloat(ratingStr)
+          var bookRating = book['average_rating'];
+          // console.log(ratingStr)
+          // var bookRating = parseFloat(ratingStr).toFixed(1)
+          // console.log("this is the rating after parseflot ->" + bookRating)
           var author = book['best_book']['author']['name']
           // console.log(author)
           var title = book['best_book']['title']
           // console.log(title)
-          console.log('appending li')
-          $(bookSearch).append(`<li class="collection-item book" data-rating="${bookRating}">${title} (${author})</li>`)
+          // console.log('appending li')
+          $(bookSearch).append(`<li class="collection-item book" data="${bookRating}">${title} (${author})</li>`)
         }
         //add event listener to the collection element
         $('.collection.book').click(function(event){
           var clickBook = event.target;
           var clickBookDivs = $('.selection.book').attr('data', bookRating);
+          // console.log(clickBookDivs)
           // var ratingThing = $(event.target).data("bookRating");
-// console.log(ratingThing)
+
 
           for(var i = 0; i < clickBookDivs.length; i++){
             if(clickBookDivs[i].innerText === ''){

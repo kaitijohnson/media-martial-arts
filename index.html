@@ -27,9 +27,9 @@
     </div>
     <!-- Heading and Search Box -->
     <div class="col s12">
-      <h1 class="center materialize-red-text text-darken-4" font-family="KnifeFightBallet-Regular">Media Martial Arts</h1>
+      <h1 class="center materialize-red-text text-darken-2" font-family="KnifeFightBallet-Regular">Media Martial Arts</h1>
       <h2 class="center">Ultimate Fight Club</h2>
-      <div class="row">
+      <div class="row searchBox">
         <div class="col s1"></div>
         <div class="black-text input-field col s8">
             <input type="text" placeholder="Search a title..." id="search" name="search"/>
@@ -56,26 +56,46 @@
 
     <!-- Dynamically generated book and movie columns -->
     <div class="row faceoff">
-      <div class="col s12">
+      <!-- <div class="col s12">
         <p class="center"><a href="#modal" class="btn waves-effect waves-light red darken-4 fightBtn" onclick="$('#modal1').modal('open')" type="submit">Fight!</a></p>
-      </div>
+      </div> -->
 
       <div class="col s1"></div>
-      <div class="col s5 book">
+      <div class="col l5 s11 book">
+        <h3>The Book</h3>
         <div class="selection book card">
         </div>
+
+        <!-- <ul class="collection book">
+        </ul> -->
+      <div class="col s1"></div>
+      </div>
+      <div class="col l5 s11 movie">
+        <h3 class="right-align">The Movie</h3>
+        <div class="selection movie card">
+        </div>
+      </div>
+<div class="row">
+  <audio id="bellSound" preload="auto">
+    <source src="bell.mp3"></source>
+</audio>
+  <div class="col s12 searchBox">
+    <p class="center"><a href="#modal" class="btn waves-effect waves-light red darken-4 fightBtn" onclick="$('#modal1').modal('open')" type="submit">Fight!</a></p>
+  </div>
+      <div class="col s1"></div>
+      <div class="col l5 s5 book">
+        <!-- <h1 class="right-align">The Movie</h1>
+        <div class="selection movie card">
+        </div> -->
         <ul class="collection book">
         </ul>
       </div>
-      <!-- <div class="col s2"></div> -->
-      <div class="col s5 movie">
-        <div class="selection movie card">
-        </div>
+      <div class="col l5 s5 movie">
         <ul class="collection movie">
         </ul>
       </div>
       <div class="col s1"></div>
-    </div>
+
 
     <!-- Movies based on search results from API -->
     <!-- <div class="row">
