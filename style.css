@@ -131,14 +131,6 @@ button{
     background-color: rgb(160,160,160);
 }
 
-/*.modal-content {
-    background-color: rgba(0,0,0,0.6);
-}*/
-
-.modal-footer {
-    background-color: rgb(160,160,160);
-}
-
 html {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   }
