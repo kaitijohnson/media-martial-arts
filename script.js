@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     audio.play();
 
-    let bookCompare = $('.selection.book').attr('data');
+    let bookCompare = parseFloat($('.selection.book').attr('data')).toFixed(1);
     let movieCompare = $('.selection.movie').attr('data');
     let selection = $('.selection.book').text();
 
@@ -65,9 +65,9 @@ $(document).ready(function() {
 
         movieSearch.show();
 
-        let title = data.Title
-        let year = data.Year
-        let movieRating = (data.imdbRating / 2).toFixed(1)
+        let title = data.Title;
+        let year = data.Year;
+        let movieRating = (data.imdbRating / 2).toFixed(1);
 
         $(movieSearch).append(`<li class="collection-item movie" data="${movieRating}">${title} (${year})</li>`)
 
