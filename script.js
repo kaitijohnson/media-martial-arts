@@ -30,7 +30,7 @@ $(document).ready(function() {
     let selection = $('.selection.book').text();
 
     if (selection.includes('(Nicholas Sparks)')) {
-      $('#results').append(`<h2 id="winner" class="center">You lose!</h2><br><p class="center searchBox" id="scores">You have selected a work by Nicholas Sparks. <br>Please improve your taste and try again.</p>`);
+      $('#results').append(`<h2 id="winner" class="center">You lose!</h2><br><div><p class="center searchBox" id="scores">You have selected a work by Nicholas Sparks. <br>Please improve your taste and try again.</p></div>`);
     }
     else if (bookCompare > movieCompare) {
       $('#results').append(`<h2 id="winner" class="center">The book is better!</h2><br><p class="center searchBox" id="scores"> The book has an average user rating of ${bookCompare} out of 5. <br>The movie is rated at ${movieCompare}.</p>`);
@@ -39,7 +39,7 @@ $(document).ready(function() {
       $('#results').append(`<h2 id="winner" class="center">The movie is better!</h2><div><p class="center resultsbox" id="scores"> The movie has an average user rating of ${movieCompare} out of 5.<br>The book is rated at ${bookCompare}.</p></div>`);
     }
     else if (bookCompare === movieCompare) {
-      $('#results').append(`<h2 id="winner">It's a draw!</h2><br><p id="scores"> Both the movie and the book are rated at ${bookCompare} out of 5.</p>`);
+      $('#results').append(`<h2 id="winner" class="center">It's a draw!</h2><div><p class="center resultsbox" id="scores">Both the movie and the book are rated at ${bookCompare} out of 5.</p></div>`);
     }
   })
 
