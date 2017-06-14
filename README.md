@@ -1,4 +1,4 @@
-# project-q1 - Kaiti Johnson
+# Media Martial Arts
 
 They say, "The book is always better," but is it really? The Media Martial Arts - Ultimate Fight Club app settles that question once and for all by comparing the average user rating of a book versus its film adaptation to determine which is better.
 
